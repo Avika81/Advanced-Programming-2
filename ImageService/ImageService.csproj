@@ -87,6 +87,11 @@
     <Compile Include="ImageService.Designer.cs">
       <DependentUpon>ImageService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Enums\CommandEnum.cs" />
+    <Compile Include="Logging\ILoggingService.cs" />
+    <Compile Include="Logging\LoggingService.cs" />
+    <Compile Include="Logging\Modal\MessageRecievedEventArgs.cs" />
+    <Compile Include="Logging\Modal\MessageTypeEnum.cs" />
     <Compile Include="Modal\Event\CommandRecievedEventArgs.cs" />
     <Compile Include="Modal\Event\DirectoryCloseEventArgs.cs" />
     <Compile Include="Modal\IImageServiceModal.cs" />
