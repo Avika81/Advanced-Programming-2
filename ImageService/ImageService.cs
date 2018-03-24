@@ -36,18 +36,22 @@ namespace ImageService
             {
                 eventLog1.Source = "MySource";
                 eventLog1.Log = "MyNewLog";
-                eventLog1.WriteEntry("In OnStart");
             }
            
          }
 
         protected override void OnStart(string[] args)
         {
+#if !DEBUG
             eventLog1.WriteEntry("In OnStart");
+#endif
         }
 
         protected override void OnStop()
         {
+#if !DEBUG
+            eventLog1.WriteEntry("In OnStop");
+#endif
         }
 
         private void eventLog1_EntryWritten(object sender, EntryWrittenEventArgs e)
