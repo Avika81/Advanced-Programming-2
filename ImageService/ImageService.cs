@@ -12,18 +12,34 @@ namespace ImageService
 {
     public partial class ImageService : ServiceBase
     {
+#if DEBUG
+        public void OnDebug()
+        {
+            OnStart(null);
+        }
+#endif
         public ImageService()
         {
             InitializeComponent();
             eventLog1 = new System.Diagnostics.EventLog();
-            if (!System.Diagnostics.EventLog.SourceExists("MySource"))
-            {
-                System.Diagnostics.EventLog.CreateEventSource(
-                    "MySource", "MyNewLog");
+            try
+            {  
+                if (!System.Diagnostics.EventLog.SourceExists("MySource"))
+                {
+                    System.Diagnostics.EventLog.CreateEventSource(
+                        "MySource", "MyNewLog");
+                }
+                eventLog1.Source = "MySource";
+                eventLog1.Log = "MyNewLog";
             }
-            eventLog1.Source = "MySource";
-            eventLog1.Log = "MyNewLog";
-        }
+            catch (System.Security.SecurityException)
+            {
+                eventLog1.Source = "MySource";
+                eventLog1.Log = "MyNewLog";
+                eventLog1.WriteEntry("In OnStart");
+            }
+           
+         }
 
         protected override void OnStart(string[] args)
         {

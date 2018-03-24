@@ -2,3 +2,11 @@ C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\�
 C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\תכנות מתקדם 2\Ex1\ImageService\bin\Debug\ImageService.exe.config
 C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\תכנות מתקדם 2\Ex1-git\Advanced-Programming-2\ImageService\bin\Debug\ImageService.exe.config
 C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\bin\Debug\ImageService.exe.config
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\bin\Debug\ImageService.exe
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\bin\Debug\ImageService.pdb
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Debug\ImageService.csprojResolveAssemblyReference.cache
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Debug\ImageService.ImageService.resources
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Debug\ImageService.ProjectInstaller.resources
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Debug\ImageService.csproj.GenerateResource.Cache
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Debug\ImageService.exe
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Debug\ImageService.pdb
