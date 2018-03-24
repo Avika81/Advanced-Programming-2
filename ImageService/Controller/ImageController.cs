@@ -25,7 +25,10 @@ namespace ImageService.Controller
         }
         public string ExecuteCommand(int commandID, string[] args, out bool resultSuccesful)
         {
-           // Write Code Here
+            // Write Code Here *********
+            resultSuccesful = true;
+            string res = "success!";
+            return res;
         }
     }
 }
