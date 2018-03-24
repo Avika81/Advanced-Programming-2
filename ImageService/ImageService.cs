@@ -42,7 +42,7 @@ namespace ImageService
 
         protected override void OnStart(string[] args)
         {
-#if !DEBUG
+#if !DEBUG //In debug it won't work (don't have the needed security).
             eventLog1.WriteEntry("In OnStart");
 #endif
         }
