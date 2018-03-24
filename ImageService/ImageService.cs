@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace ImageService
 {
-    public partial class Service1 : ServiceBase
+    public partial class ImageService : ServiceBase
     {
-        public Service1()
+        public ImageService()
         {
             InitializeComponent();
             eventLog1 = new System.Diagnostics.EventLog();

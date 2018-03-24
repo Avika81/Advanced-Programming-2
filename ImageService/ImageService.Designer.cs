@@ -1,6 +1,6 @@
 ﻿namespace ImageService
 {
-    partial class Service1
+    partial class ImageService
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,7 +37,7 @@
             // 
             // Service1
             // 
-            this.ServiceName = "Service1";
+            this.ServiceName = "ImageService";
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
 
         }
