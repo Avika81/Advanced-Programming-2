@@ -14,5 +14,18 @@ namespace ImageService.Modal
         /// <param name="path">The Path of the Image from the file</param>
         /// <returns> Indication if the Addition Was Successful</returns>
         string AddFile(string path, out bool result);
+        /// <summary>
+        /// The Function Addes A file to the system
+        /// </summary>
+        /// <param name="path">The Path of the folder
+        /// <returns> Indication if the Addition Was Successful</returns>
+        string CreateFolder(string path, out bool result);
+        /// <summary>
+        /// The Function Addes A file to the system
+        /// </summary>
+        /// <param name="oldPath">The Path of the Image from the file</param>
+        /// <param name="newPath">The New Path for the Image from the file</param>
+        /// <returns> Indication if the Addition Was Successful</returns>
+        string MoveFile(string oldPath, string newPath, out bool result);
     }
 }

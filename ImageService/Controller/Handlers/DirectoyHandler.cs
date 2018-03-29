@@ -30,7 +30,7 @@ namespace ImageService.Controller.Handlers
         }
         public void OnCommandRecieved(object sender, CommandRecievedEventArgs e)     // The Event that will be activated upon new Command
         {
-
+         
         }
     }
 }
