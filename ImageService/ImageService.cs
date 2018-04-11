@@ -31,6 +31,26 @@ namespace ImageService
             eventLog.Log = ConfigurationManager.AppSettings["LogName"];
         }
 
+        protected override void OnStop()
+        {
+            logger.Log(new MessageRecievedEventArgs
+            {
+                Status = MessageTypeEnum.INFO,
+                Message = "Stopping service.."
+            });
+            //close directory watchers
+            server.SendCommand(new Controller.Handlers.CommandRecievedEventArgs
+            {
+                Type = CommandEnum.CloseCommand
+            });
+            //notify about service closure
+            logger.Log(new MessageRecievedEventArgs
+            {
+                Status = MessageTypeEnum.INFO,
+                Message = "Service Stopped."
+            });
+        }
+
         protected override void OnStart(string[] args)
         {
             //create logger
@@ -68,26 +88,7 @@ namespace ImageService
                 Message = "Service started."
             });
         }
-
-        protected override void OnStop()
-        {
-            logger.Log(new MessageRecievedEventArgs
-            {
-                Status = MessageTypeEnum.INFO,
-                Message = "Stopping service.."
-            });
-            //close directory watchers
-            server.SendCommand(new Controller.Handlers.CommandRecievedEventArgs
-            {
-                Type = CommandEnum.CloseCommand
-            });
-            //notify about service closure
-            logger.Log(new MessageRecievedEventArgs
-            {
-                Status = MessageTypeEnum.INFO,
-                Message = "Service Stopped."
-            });
-        }
+       
         /// <summary>
         /// used to write messages to the service's event log
         /// </summary>
@@ -102,6 +103,18 @@ namespace ImageService
         private static extern bool SetServiceStatus(IntPtr handle, ref ServiceStatus serviceStatus);
     }
 
+    public struct ServiceStatus
+    {
+        public int dwServiceType;
+        public ServiceState dwCurrentState;
+        public int dwControlsAccepted;
+        public int dwWin32ExitCode;
+        public int dwServiceSpecificExitCode;
+        public int dwCheckPoint;
+        public int dwWaitHint;
+    };
+
+
     public enum ServiceState
     {
         SERVICE_STOPPED = 0x00000001,
@@ -114,14 +127,4 @@ namespace ImageService
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public struct ServiceStatus
-    {
-        public int dwServiceType;
-        public ServiceState dwCurrentState;
-        public int dwControlsAccepted;
-        public int dwWin32ExitCode;
-        public int dwServiceSpecificExitCode;
-        public int dwCheckPoint;
-        public int dwWaitHint;
-    };
 }
