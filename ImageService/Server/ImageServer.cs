@@ -1,55 +1,73 @@
-﻿using ImageService.Controller;
-using ImageService.Controller.Handlers;
-using ImageService.Infrastructure.Enums;
-using ImageService.Logging;
+﻿using ImageService.Controller.Handlers;
 using ImageService.Modal;
 using System;
-using System.Threading
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ImageService.Server
 {
     public class ImageServer
     {
-        
         #region Members
-        private static ImageServer instance;
-        private IImageController m_controller;
-        private ILoggingService m_logging;
-        CommandRecievedEventArgs input;
+        private IImageModal m_controller;
+        private ILoggingModal m_logging;
         #endregion
 
         #region Properties
-        public event EventHandler<CommandRecievedEventArgs> CommandRecieved;// The event that notifies about a new Command being recieved
+        public event EventHandler<CommandRecievedEventArgs> CommandRecieved;          // The event that notifies about a new Command being recieved
         #endregion
 
-        //constructor - will run the server automaticly:
-        private ImageServer() { }
-        
-        public static ImageServer getInstance()
+        /// <summary>
+        /// Initiate a watching server
+        /// </summary>
+        /// <param name="logModal">The logging modal used by the server</param>
+        /// <param name="outputFolder">Where to save our backup images</param>
+        /// <param name="thumbnailSize">To size of thumbnail to create</param>
+        public ImageServer(ILoggingModal logModal,string outputFolder,int thumbnailSize)
         {
-            if(instance== null)
-            {
-                instance = new ImageServer();
-            }
-            return instance;
-        } // the server is singelton
-
-        public static void StartWork(EventHandler<CommandRecievedEventArgs> CommandRecieved, IImageController m_controller, ILoggingService m_logging, CommandRecievedEventArgs input)
-        {
-            CommandRecieved.Invoke(m_logging, input);
+            m_logging = logModal;
+            m_controller = new ImageModal(outputFolder, thumbnailSize);
         }
 
-        public static void OnStart() {
-            while (true)
+        /// <summary>
+        /// Start watching to directory for new files
+        /// </summary>
+        /// <param name="path">path to the directory</param>
+        /// <returns>the success of the procedure</returns>
+        public bool WatchDirectory(string path)
+        {
+            DirectoryHandler dh = new DirectoryHandler(m_controller, m_logging);
+            try
             {
-                bool res = true;
-                Thread t = new Thread(() => StartWork(getInstance().CommandRecieved, getInstance().m_controller, getInstance().m_logging, getInstance().CommandRecievedEve));
+                dh.StartHandleDirectory(path);
+                CommandRecieved += dh.OnCommandRecieved;
+                dh.DirectoryClose += CloseServer;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
+
+        /// <summary>
+        /// used to stop watching a directory.
+        /// </summary>
+        /// <param name="sender">The directory handler that we want to stop watching</param>
+        /// <param name="args">unused</param>
+        public void CloseServer(object sender, DirectoryCloseEventArgs args)
+        {
+            DirectoryHandler dh = (DirectoryHandler)sender;
+            CommandRecieved -= dh.OnCommandRecieved;
+            dh.DirectoryClose -= CloseServer;
+        }
+
+        /// <summary>
+        /// sends command to watched directories
+        /// </summary>
+        /// <param name="arg"></param>
+        public void SendCommand(CommandRecievedEventArgs arg)
+        {
+            CommandRecieved.Invoke(this, arg);
+        }
+
     }
 }
-

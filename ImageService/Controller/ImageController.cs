@@ -1,36 +1,27 @@
 ﻿using ImageService.Commands;
-using ImageService.Infrastructure;
-using ImageService.Infrastructure.Enums;
 using ImageService.Modal;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ImageService.Controller
 {
     public class ImageController : IImageController
     {
-        private IImageServiceModal m_modal;                      // The Modal Object
-        private Dictionary<int, ICommand> commands;
+        private Dictionary<CommandEnum, ICommand> commands; // keeps a dictonary of available commands
 
-        public ImageController(IImageServiceModal modal)
+        public ImageController(IImageModal modal)
         {
-            m_modal = modal;                    // Storing the Modal Of The System
-            commands = new Dictionary<int, ICommand>()
+            NewFileCommand newFile = new NewFileCommand(modal);
+            commands = new Dictionary<CommandEnum, ICommand>
             {
-               { (int)CommandEnum.NewFileCommand,new NewFileCommand(modal) }
+                { CommandEnum.NewFileCommand, newFile }
             };
         }
-        public string ExecuteCommand(int commandID, string[] args, out bool resultSuccesful)
+
+        public string ExecuteCommand(CommandEnum commandID, string[] args, out bool resultSuccesful)
         {
-            if(!commands.ContainsKey(commandID)) // the command doesn't exists.
-            {
-                resultSuccesful = false;
-                return "";
-            }
+          
             return commands[commandID].Execute(args, out resultSuccesful);
         }
+        
     }
 }

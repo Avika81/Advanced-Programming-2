@@ -14,19 +14,12 @@ namespace ImageService
         /// </summary>
         static void Main()
         {
-#if DEBUG
-            ImageService debugService = new ImageService();
-            debugService.OnDebug();
-            System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);
-
-#else
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
                 new ImageService()
             };
             ServiceBase.Run(ServicesToRun);
-#endif
         }
     }
 }

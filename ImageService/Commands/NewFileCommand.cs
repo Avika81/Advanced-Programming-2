@@ -1,26 +1,19 @@
-﻿using ImageService.Infrastructure;
-using ImageService.Modal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ImageService.Modal;
 
 namespace ImageService.Commands
 {
-    public class NewFileCommand : ICommand
+    class NewFileCommand : ICommand
     {
-        private IImageServiceModal m_modal;
+        private IImageModal m_modal;
 
-        public NewFileCommand(IImageServiceModal modal)
+        public NewFileCommand(IImageModal modal)
         {
-            m_modal = modal;            // Storing the Modal
+            m_modal = modal;    
         }
-
+        //execute addFile method on registered modal
         public string Execute(string[] args, out bool result)
         {
-            string path = args[0];
-            return m_modal.AddFile(path, out result);
+            return m_modal.AddFile(args[0], out result);
         }
     }
 }

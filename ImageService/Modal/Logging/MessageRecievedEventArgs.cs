@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ImageService.Modal.Logging;
+using System;
 
-namespace ImageService.Logging.Modal
+namespace ImageService.Modal
 {
     public class MessageRecievedEventArgs : EventArgs
     {
