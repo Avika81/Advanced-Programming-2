@@ -15,17 +15,7 @@ namespace ImageService.Server
         public event EventHandler<CommandRecievedEventArgs> CommandRecieved;          // The event that notifies about a new Command being recieved
         #endregion
 
-        /// <summary>
-        /// Initiate a watching server
-        /// </summary>
-        /// <param name="logModal">The logging modal used by the server</param>
-        /// <param name="outputFolder">Where to save our backup images</param>
-        /// <param name="thumbnailSize">To size of thumbnail to create</param>
-        public ImageServer(ILoggingModal logModal,string outputFolder,int thumbnailSize)
-        {
-            m_logging = logModal;
-            m_controller = new ImageModal(outputFolder, thumbnailSize);
-        }
+        
 
         /// <summary>
         /// Start watching to directory for new files
@@ -49,6 +39,27 @@ namespace ImageService.Server
         }
 
         /// <summary>
+        /// Initiate a watching server
+        /// </summary>
+        /// <param name="logModal">The logging modal used by the server</param>
+        /// <param name="outputFolder">Where to save our backup images</param>
+        /// <param name="thumbnailSize">To size of thumbnail to create</param>
+        public ImageServer(ILoggingModal logModal,string outputFolder,int thumbnailSize)
+        {
+            m_logging = logModal;
+            m_controller = new ImageModal(outputFolder, thumbnailSize);
+        }
+        
+        /// <summary>
+        /// sends command to watched directories
+        /// </summary>
+        /// <param name="arg"></param>
+        public void SendCommand(CommandRecievedEventArgs arg)
+        {
+            CommandRecieved.Invoke(this, arg);
+        }
+
+        /// <summary>
         /// used to stop watching a directory.
         /// </summary>
         /// <param name="sender">The directory handler that we want to stop watching</param>
@@ -60,14 +71,5 @@ namespace ImageService.Server
             dh.DirectoryClose -= CloseServer;
         }
 
-        /// <summary>
-        /// sends command to watched directories
-        /// </summary>
-        /// <param name="arg"></param>
-        public void SendCommand(CommandRecievedEventArgs arg)
-        {
-            CommandRecieved.Invoke(this, arg);
-        }
-
     }
-}
+}//End of namespace

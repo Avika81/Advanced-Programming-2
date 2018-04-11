@@ -9,6 +9,5 @@
         /// <param name="path">Path to the new file added</param>
         /// <returns>the result of the procedure</returns>
         string AddFile(string path, out bool result);
-
     }
 }
