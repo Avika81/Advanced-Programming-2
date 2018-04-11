@@ -10,10 +10,10 @@ namespace ImageService.Controller.Handlers
     public class DirectoryHandler : IDirectoryHandler
     {
         #region Members
-        private IImageController m_controller;              // The Image Processing Controller
-        private ILoggingModal m_logging;                    // The logging unit
-        private FileSystemWatcher m_dirWatcher;             // The Watcher of the Dir
-        private string m_path;                              // The Path of directory
+        private IImageController m_controller;              // Image Processing Controller
+        private ILoggingModal m_logging;                    // logging unit
+        private FileSystemWatcher m_dirWatcher;             // Watcher of the Directory
+        private string m_path;                              // Directory's path
         private string[] trackedExt;                        // The extantions that we are currently tracking
         #endregion
 
