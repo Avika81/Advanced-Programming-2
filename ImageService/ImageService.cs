@@ -17,6 +17,9 @@ namespace ImageService
         private ILoggingModal logger;  
         private ImageServer server; // the server that listens to the directories
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public ImageService()
         {
             InitializeComponent();
@@ -31,26 +34,10 @@ namespace ImageService
             eventLog.Log = ConfigurationManager.AppSettings["LogName"];
         }
 
-        protected override void OnStop()
-        {
-            logger.Log(new MessageRecievedEventArgs
-            {
-                Status = MessageTypeEnum.INFO,
-                Message = "Stopping service.."
-            });
-            //close directory watchers
-            server.SendCommand(new Controller.Handlers.CommandRecievedEventArgs
-            {
-                Type = CommandEnum.CloseCommand
-            });
-            //notify about service closure
-            logger.Log(new MessageRecievedEventArgs
-            {
-                Status = MessageTypeEnum.INFO,
-                Message = "Service Stopped."
-            });
-        }
-
+        /// <summary>
+        /// runs on the start of the program
+        /// </summary>
+        /// <param name="args">the arguments for the starting</param>
         protected override void OnStart(string[] args)
         {
             //create logger
@@ -88,7 +75,30 @@ namespace ImageService
                 Message = "Service started."
             });
         }
-       
+
+        /// <summary>
+        /// runs on the start of the program
+        /// </summary>
+        protected override void OnStop()
+        {
+            logger.Log(new MessageRecievedEventArgs
+            {
+                Status = MessageTypeEnum.INFO,
+                Message = "Stopping service.."
+            });
+            //close directory watchers
+            server.SendCommand(new Controller.Handlers.CommandRecievedEventArgs
+            {
+                Type = CommandEnum.CloseCommand
+            });
+            //notify about service closure
+            logger.Log(new MessageRecievedEventArgs
+            {
+                Status = MessageTypeEnum.INFO,
+                Message = "Service Stopped."
+            });
+        }
+        
         /// <summary>
         /// used to write messages to the service's event log
         /// </summary>
@@ -102,7 +112,8 @@ namespace ImageService
         [DllImport("advapi32.dll", SetLastError = true)]
         private static extern bool SetServiceStatus(IntPtr handle, ref ServiceStatus serviceStatus);
     }
-
+    
+    [StructLayout(LayoutKind.Sequential)]
     public struct ServiceStatus
     {
         public int dwServiceType;
@@ -114,7 +125,6 @@ namespace ImageService
         public int dwWaitHint;
     };
 
-
     public enum ServiceState
     {
         SERVICE_STOPPED = 0x00000001,
@@ -125,6 +135,4 @@ namespace ImageService
         SERVICE_PAUSE_PENDING = 0x00000006,
         SERVICE_PAUSED = 0x00000007,
     }
-
-    [StructLayout(LayoutKind.Sequential)]
 }

@@ -8,7 +8,12 @@ namespace ImageService.Controller
     {
         private Dictionary<CommandEnum, ICommand> commands; // keeps a dictonary of available commands
 
-        public ImageController(IImageModal modal)
+        public string ExecuteCommand(CommandEnum commandID, string[] args, out bool resultSuccesful)
+        {
+            return commands[commandID].Execute(args, out resultSuccesful);
+        }
+
+        public ImageController(IImageModal modal) //Constructor
         {
             NewFileCommand newFile = new NewFileCommand(modal);
             commands = new Dictionary<CommandEnum, ICommand>
@@ -16,12 +21,5 @@ namespace ImageService.Controller
                 { CommandEnum.NewFileCommand, newFile }
             };
         }
-
-        public string ExecuteCommand(CommandEnum commandID, string[] args, out bool resultSuccesful)
-        {
-          
-            return commands[commandID].Execute(args, out resultSuccesful);
-        }
-        
     }
 }
