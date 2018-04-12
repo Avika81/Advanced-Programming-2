@@ -10,8 +10,7 @@ namespace ImageService.Modal.Logging
     }
 
     static class MessageTypeEnumMethod
-    {
-
+    { 
         public static EventLogEntryType Translate(this MessageTypeEnum type)
         {
             switch (type)

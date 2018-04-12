@@ -1,5 +1,4 @@
 ﻿using ImageService.Commands;
-using ImageService.Modal;
 using System;
 
 namespace ImageService.Controller.Handlers

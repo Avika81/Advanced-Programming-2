@@ -13,6 +13,7 @@ namespace ImageService.Modal
         private string m_OutputFolder;            // The Output Folder
         private int m_thumbnailSize;              // The Size Of The Thumbnail Size
         private static Regex r;                   // Used for DateTime function
+        #endregion
 
         public ImageModal(string outPutFolder, int thumbnailSize)
         {
@@ -23,7 +24,6 @@ namespace ImageService.Modal
 
         public string AddFile(string path, out bool result)
         {
-            // get picture name
             string name = path.Substring(path.LastIndexOf("\\"));
 
             //path builders
@@ -101,10 +101,7 @@ namespace ImageService.Modal
                 return "Image copying failed: " + e.Message;
             }
         }
-
-
-
-
+        
         /// <summary>
         /// retrieves the datetime when the image was taken
         /// </summary>
@@ -138,8 +135,5 @@ namespace ImageService.Modal
             return dateTime;
 
         }
-
-        #endregion
-
     }
 }
