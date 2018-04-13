@@ -1,0 +1,24 @@
+9ae1f57 (HEAD -> master, origin/master) appConfig
+759b0db debug
+3ebc41f Finish?
+4a9b382 Finished?
+4f04715 working
+45be3cb Some little finished
+ad648ad worked on the directory handler
+7c3cbb6 lalala
+d02890c worked on the Directory handler
+e800d9c finished the command and ImageController (maybe)
+98baefb Commit
+2a92fb2 finished the ImageService Modal and logging modal ?
+c7fb725 NOTHING IS WORKING :(
+46c7b8b added the infrastructure files, (sum enums)
+36ac474 added App config file
+a6b66af Added the logging and Image modal (didn't test it yet)
+de7e404 The debug is running now! :)
+2423593 added the debug option
+9600aa6 Finished the tutorial (I think d very much hope so)
+92c3616 trying to change the name property
+ebe6213 working
+99d29e3 cleaned the repo
+cb55135 First commit (trying to connect visual to git)
+fb52a15 Initial commit
