@@ -1,0 +1,4 @@
+#Tue Jun 19 14:05:05 IDT 2018
+base.0=C\:\\Users\\avika\\AndroidStudioProjects\\ImageService\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
