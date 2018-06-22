@@ -1,0 +1,8 @@
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\bin\Release\ImageService.exe.config
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\bin\Release\ImageService.exe
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\bin\Release\ImageService.pdb
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Release\ImageService.ImageService.resources
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Release\ImageService.ProjectInstaller.resources
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Release\ImageService.csproj.GenerateResource.Cache
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Release\ImageService.exe
+C:\Users\avika\Desktop\BackUp DOK\Bachelor's degree\Computer Science\שנה ג\Advanced-Programming-2\ImageService\obj\Release\ImageService.pdb
