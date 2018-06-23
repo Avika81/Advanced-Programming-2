@@ -1,0 +1,8 @@
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\ImageServiceGUI\obj\Debug\ImageServiceGUI.csprojResolveAssemblyReference.cache
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\ImageServiceGUI\obj\Debug\MainWindow.g.cs
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\ImageServiceGUI\obj\Debug\View\LogView.g.cs
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\ImageServiceGUI\obj\Debug\View\SettingsView.g.cs
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\ImageServiceGUI\obj\Debug\App.g.cs
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\ImageServiceGUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\ImageServiceGUI\obj\Debug\ImageServiceGUI_MarkupCompile.cache
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\ImageServiceGUI\obj\Debug\ImageServiceGUI_MarkupCompile.lref

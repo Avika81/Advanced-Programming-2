@@ -1,0 +1,4 @@
+#Fri Jun 22 03:21:48 IDT 2018
+base.0=C\:\\Users\\avika\\Desktop\\AndroidImageService-master\\AndroidImageService-master\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,7 @@
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\SharedFiles\bin\Debug\SharedFiles.exe.config
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\SharedFiles\bin\Debug\SharedFiles.exe
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\SharedFiles\bin\Debug\SharedFiles.pdb
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\SharedFiles\obj\Debug\SharedFiles.exe
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\SharedFiles\obj\Debug\SharedFiles.pdb
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\SharedFiles\obj\Debug\SharedFiles.csprojAssemblyReference.cache
+C:\Users\avika\Desktop\ImageService-master\ImageService-master\SharedFiles\obj\Debug\SharedFiles.csproj.CoreCompileInputs.cache

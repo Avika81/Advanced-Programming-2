@@ -1,0 +1,51 @@
+﻿@model ImageServiceWebApplication.Models.ConfigModel
+
+
+@{
+    ViewBag.Title = "Config";
+}
+
+<h2>Configuration</h2>
+
+@using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+
+    <div class="table table-striped-group">
+        <hr />
+        <p>
+            @Html.LabelFor(m => m.OutputDirectory, new { @class = "col-md-2 control-label" })
+
+            @Html.DisplayFor(m => m.OutputDirectory, new { @class = "col-md-2 control-label" })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.SourceName, new { @class = "col-md-2 control-label" })
+
+            @Html.DisplayFor(m => m.SourceName, new { @class = "col-md-2 control-label" })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.LogName, new { @class = "col-md-2 control-label" })
+
+            @Html.DisplayFor(m => m.LogName, new { @class = "col-md-2 control-label" })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.ThumbnailSize, new { @class = "col-md-2 control-label" })
+
+            @Html.DisplayFor(m => m.ThumbnailSize, new { @class = "col-md-2 control-label" })
+        </p>
+        <br />
+        <p><label>The Handlers:</label></p>
+
+        <ul class="nav nav-pills nav-stacked">
+            @foreach (var item in Model.Handlers)
+                {
+                <li>
+                    @Html.ActionLink(@item, "DeleteHandler", new { handler = item })
+                </li>
+                }
+        </ul>
+    </div>
+
+    }
+
+

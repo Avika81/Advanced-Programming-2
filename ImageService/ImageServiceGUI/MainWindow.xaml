@@ -1,0 +1,48 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageServiceGUI"
+        xmlns:View="clr-namespace:ImageServiceGUI.View" xmlns:ViewModel="clr-namespace:ImageServiceGUI.ViewModel"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:i1="http://prismlibrary.com/" x:Class="ImageServiceGUI.MainWindow"
+        mc:Ignorable="d"
+    Title="ImageServiceGUI" Height="450" Width="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction  Command="{Binding CloseCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid>
+        <Button Grid.RowSpan="4">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="White" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path = HasConnection}"
+                             Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <TabControl HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800" Grid.RowSpan="4">
+            <TabItem Header="Settings">
+                <UserControl>
+                    <View:SettingsView HorizontalAlignment="Center" Height="450" VerticalAlignment="Center" Width="800"/>
+                </UserControl>
+            </TabItem>
+            <TabItem Header="Logs">
+                <UserControl>
+                    <View:LogView HorizontalAlignment="Center" Height="422"  VerticalAlignment="Top" Width="800" Margin="-3,0"/>
+                </UserControl>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+
+</Window>

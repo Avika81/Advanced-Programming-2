@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ImageServiceWebApplication.Models.LogModel.Log>
+
+@{
+    ViewBag.Title = "Logs";
+    ViewBag.SearchKey = "";
+    int i = 0;
+}
+
+<div>
+    <h3>Search logs by type</h3>
+    @using (Html.BeginForm("Logs", "Logs", FormMethod.Post))
+        {
+
+        <div>
+            <input type="text" id="typeToFind" name="typeToFind">
+
+            <input type="submit" id="submitId" value="Search" class="btn-info"/>
+
+        </div>
+
+        }
+
+</div>
+    <h2>Logs list</h2>
+    <table class="table">
+        <tr>
+            <th width="10">
+                #
+            </th>
+            <th width="50">
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @{i = (i + 1);
+                    }
+                    @i
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Message)
+                </td>
+ 
+            </tr>}
+
+    </table>

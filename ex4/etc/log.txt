@@ -189,3 +189,182 @@ Author: Avi Kadria <avi.kadria3@gmail.com>
 Date:   Sat Mar 24 17:23:39 2018 +0300
 
     Initial commit
+commit d161aa611130fbff1e4e29a94042c308e9770b4e
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Fri Jun 22 03:28:14 2018 +0300
+
+    finished #kallll
+
+commit 9dd7be970e6f7196a004c5416c25d51db2ef94f4
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Tue Jun 19 15:38:46 2018 +0300
+
+    finished the project finaly no more programming <3
+
+commit 207744d94065ae137da354e4abe887ce3109814a
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Tue Jun 19 15:30:46 2018 +0300
+
+    finished ex4
+
+commit a52e83832d94bcef561946901d0c4766b9c93063
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Fri Jun 1 03:36:38 2018 +0300
+
+    added submission folder of ex1
+
+commit 11d280e9022b9e20b22f0d4925d272cc356be5ed
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Apr 14 01:45:31 2018 +0300
+
+    הגשה
+
+commit abb476176007d3700b0a52558bb49d6cab8f31ef
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Apr 14 01:37:05 2018 +0300
+
+    finished
+
+commit 9ae1f5721ba4c1836f0541f00d3dfe484c3a0b7c
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Thu Apr 12 09:01:28 2018 +0300
+
+    appConfig
+
+commit 759b0dbcc764f31e5746c3b0d656ba5c3b4461d6
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Thu Apr 12 07:39:04 2018 +0300
+
+    debug
+
+commit 3ebc41fc8f104a13096609fbfcb035f14092afa2
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Thu Apr 12 07:18:36 2018 +0300
+
+    Finish?
+
+commit 4a9b3821fb59f95f137803aa6486ee9cefba557c
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Wed Apr 11 21:56:29 2018 +0300
+
+    Finished?
+
+commit 4f04715db069653cf017e1065b08b2cfd970ac46
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Wed Apr 11 21:51:11 2018 +0300
+
+    working
+
+commit 45be3cbacbd4d94cd87ba57746c043810a87827a
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Wed Apr 11 21:49:40 2018 +0300
+
+    Some little finished
+
+commit ad648adaca47c5c12db313d4fdfb63639f08361c
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Wed Apr 11 21:45:58 2018 +0300
+
+    worked on the directory handler
+
+commit 7c3cbb637f2a2e95091977dca2782593ca7ad6a1
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Wed Apr 11 21:43:44 2018 +0300
+
+    lalala
+
+commit d02890c359e717fae9f342b88aa648cfcb857ae7
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Wed Apr 11 21:21:08 2018 +0300
+
+    worked on the Directory handler
+
+commit e800d9c921a9d1dfd145a4a4962d85bbc4ce258e
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Wed Apr 11 21:13:25 2018 +0300
+
+    finished the command and ImageController (maybe)
+
+commit 98baefbeb091e940bbd68c1548e631fc34c55404
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Thu Mar 29 14:40:45 2018 +0300
+
+    Commit
+
+commit 2a92fb2f258109edb60220de475f320bc9187c8a
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Thu Mar 29 03:15:22 2018 +0300
+
+    finished the ImageService Modal and logging modal ?
+
+commit c7fb7257f00a6fe5d0f466bd5d30e4dfe22d1988
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 21:01:05 2018 +0300
+
+    NOTHING IS WORKING :(
+
+commit 46c7b8bc460a9f8ff16f6ab324dc1785ae5afb10
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 20:47:40 2018 +0300
+
+    added the infrastructure files, (sum enums)
+
+commit 36ac4742b0aed0221bbf931ae4e760fd19cbfa7a
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 20:44:47 2018 +0300
+
+    added App config file
+
+commit a6b66afd511a1e457a8e7d432673d85b3453aa61
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 20:38:16 2018 +0300
+
+    Added the logging and Image modal (didn't test it yet)
+
+commit de7e40424268cc6c285aa3fea6fcc3322d54a148
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 18:49:41 2018 +0300
+
+    The debug is running now! :)
+
+commit 2423593a5cbf8420ffc7ae899c19ed85cbf3d002
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 18:45:22 2018 +0300
+
+    added the debug option
+
+commit 9600aa6ae38b5f96e676e2a8cee57d2d467b2567
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 18:16:20 2018 +0300
+
+    Finished the tutorial (I think d very much hope so)
+
+commit 92c361646179348b509b281730553edb29738152
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 18:09:29 2018 +0300
+
+    trying to change the name property
+
+commit ebe621333a64b19c975be362a186fe80d140d4de
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 17:58:42 2018 +0300
+
+    working
+
+commit 99d29e3b906225adce288149ec35098f6e369345
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 17:55:50 2018 +0300
+
+    cleaned the repo
+
+commit cb5513500f4a33d81ba325169a9450d182aaa7ac
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 17:53:11 2018 +0300
+
+    First commit (trying to connect visual to git)
+
+commit fb52a15c2466def64104521466cb86821cd3d5b7
+Author: Avi Kadria <avi.kadria3@gmail.com>
+Date:   Sat Mar 24 17:23:39 2018 +0300
+
+    Initial commit
